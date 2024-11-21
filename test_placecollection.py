@@ -10,13 +10,13 @@ def run_tests():
     print("Test empty PlaceCollection:")
     place_collection = PlaceCollection()
     print(place_collection)
-    assert not place_collection.places  # an empty list is considered False
+    assert place_collection.places == []
 
     # Test loading places
     print("Test loading places:")
     place_collection.load_places('places.json')
     print(place_collection)
-    assert place_collection.places  # assuming CSV file is non-empty, non-empty list is considered True
+    assert place_collection.places  # Assuming the data file is non-empty, non-empty list is considered True
 
     # Test adding a new Place with values
     print("Test adding new place:")
@@ -29,7 +29,7 @@ def run_tests():
     print(place_collection)
     # TODO: Add more sorting tests
 
-    # TODO: Test saving places (check CSV file manually to see results)
+    # TODO: Test saving places (check data file manually to see results)
 
     # TODO: Add more tests, as appropriate, for each method
 
