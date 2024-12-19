@@ -12,7 +12,7 @@ def run_tests():
     assert default_place.name == ""
     assert default_place.country == ""
     assert default_place.priority == 0
-    assert not default_place.is_visited
+    assert default_place.is_visited is False
 
     # Test initial-value place
     print("Test initial-value place:")
